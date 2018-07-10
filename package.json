@@ -1,0 +1,17 @@
+{
+  "name": "zack-essay",
+  "version": "0.0.1",
+  "description": "Writing essays like Zack.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "AJ Hsu <im.ajhsu@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "nodejieba": "^2.2.6"
+  },
+  "devDependencies": {
+    "jest": "^23.3.0"
+  }
+}
