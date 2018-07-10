@@ -14,6 +14,9 @@ function removePunctuation(input) {
  * @param {Object} res Cloud Function response context.
  */
 exports.convert = (req, res) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET');
+
   const defaultString = '你沒有輸入任何文字';
   const sourceString = req.query.q || defaultString;
   const outputString = jieba
