@@ -1,4 +1,4 @@
-const convert = require('./convert');
+const convert = require('./lib/convert');
 
 /**
  * HTTP Cloud Function.
