@@ -1,7 +1,4 @@
-const jieba = require('nodejieba');
-const { removePunctuation } = require('./punctuation');
-
-jieba.load({ dict: './dict.txt' });
+const convert = require('./convert');
 
 /**
  * HTTP Cloud Function.
@@ -17,10 +14,7 @@ exports.convert = (req, res) => {
 
   const defaultString = '你沒有輸入任何文字';
   const sourceString = req.query.q || defaultString;
-  const outputString = jieba
-    .cut(removePunctuation(sourceString))
-    .concat([''])
-    .join('...');
+  const outputString = convert(sourceString);
 
   res.json({
     result: outputString

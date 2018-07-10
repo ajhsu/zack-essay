@@ -1,8 +1,5 @@
-const jieba = require('nodejieba');
-const { removePunctuation } = require('./punctuation');
+const convert = require('./convert');
 
-jieba.load({ dict: './dict.txt' });
-
-const sourceString = '不可能通過啦！資進黨跟資方站在同一線';
-const result = jieba.cut(removePunctuation(sourceString)).concat(['']);
-console.log(result.join('...'));
+console.log(
+  convert('逢颱風來襲就去賣場大批採購排隊不過是湊熱鬧製造參與感沒有意義')
+);
