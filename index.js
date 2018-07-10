@@ -1,9 +1,7 @@
 const jieba = require('nodejieba');
-jieba.load({ dict: './dict.txt' });
+const { removePunctuation } = require('./punctuation');
 
-function removePunctuation(input) {
-  return input.replace(/[，|、|。|！]/g, '');
-}
+jieba.load({ dict: './dict.txt' });
 
 /**
  * HTTP Cloud Function.
